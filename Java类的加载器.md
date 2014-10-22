@@ -108,6 +108,7 @@ Java提供了显式加载类的API：Class.forName(classname)和Class.forName(cl
 以上是关于类加载器的工作原理。我们已经知道了委托、可见性以及单一性原理，这些对于调试类加载器相关问题时至关重要。这些对于Java程序员和架构师来说都是必不可少的知识。
 
 
-原文链接： [Javarevisited](http://http://javarevisited.blogspot.hk/2012/12/how-classloader-works-in-java.html) 翻译： [ImportNew.com](http://www.importnew.com/) - [唐小娟](http://www.importnew.com/author/tangxiaojuan)
+原文链接： [Javarevisited](http://http://javarevisited.blogspot.hk/2012/12/how-classloader-works-in-java.html)   
+翻译： [ImportNew.com](http://www.importnew.com/) - [唐小娟](http://www.importnew.com/author/tangxiaojuan)  
 译文链接： [http://www.importnew.com/6581.html](http://www.importnew.com/6581.html)  
 [ 转载请保留原文出处、译者和译文链接。]
