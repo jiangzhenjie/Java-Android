@@ -28,7 +28,7 @@ Java类加载器的作用就是在运行时加载类。Java类加载器基于三
 2) Extension类加载器 – JRE/lib/ext或者java.ext.dirs指向的目录
 
 3) Application类加载器 – CLASSPATH环境变量, 由-classpath或-cp选项定义,或者是JAR中的Manifest的classpath属性定义.
-![](http://http://cdn1.importnew.com/2013/10/java_classloader_hierarchy.png)
+![](http://cdn1.importnew.com/2013/10/java_classloader_hierarchy.png)
 
 
 ###类加载器的工作原理###
@@ -38,7 +38,7 @@ Java类加载器的作用就是在运行时加载类。Java类加载器基于三
 ####委托机制####
 
 当一个类加载和初始化的时候，类仅在有需要加载的时候被加载。假设你有一个应用需要的类叫作Abc.class，首先加载这个类的请求由Application类加载器委托给它的父类加载器Extension类加载器，然后再委托给Bootstrap类加载器。Bootstrap类加载器会先看看rt.jar中有没有这个类，因为并没有这个类，所以这个请求由回到Extension类加载器，它会查看jre/lib/ext目录下有没有这个类，如果这个类被Extension类加载器找到了，那么它将被加载，而Application类加载器不会加载这个类；而如果这个类没有被Extension类加载器找到，那么再由Application类加载器从classpath中寻找。记住classpath定义的是类文件的加载目录，而PATH是定义的是可执行程序如javac，java等的执行路径。
-![](http://http://cdn1.importnew.com/2013/10/Java-classloader-working.png)
+![](http://cdn1.importnew.com/2013/10/Java-classloader-working.png)
 
 
 ####可见性机制####
