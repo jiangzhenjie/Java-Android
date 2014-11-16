@@ -4,7 +4,12 @@
 
 	This Handler class should be static or leaks might occur   
 
- 	In Android, Handler classes should be static or leaks might occur, Messages   enqueued on the application thread's MessageQueue also retain their target Handler. If the Handler is an inner class, its outer class will be retained as well. To avoid leaking the outer class, declare the Handler as a static nested class with a WeakReference to its outer class.
+	In Android, Handler classes should be static or leaks might occur, 
+	Messages   enqueued on the application thread's MessageQueue also 
+	retain their target Handler. If the Handler is an inner class, its 
+	outer class will be retained as well. To avoid leaking the outer class,
+	declare the Handler as a static nested class with a WeakReference to 
+	its outer class.
 
 ### 为什么Handler不声明为static可能引起内存泄露？ ###
 1. 当Android应用启动的时候，UI Thread会创建一个Looper对象，Looper对象负责管理Message Queue，Looper对象的生命周期是整个应用程序。
@@ -71,4 +76,3 @@
 ### 参考 ###
 1. [内部Handler类引起内存泄露](http://blog.chengyunfeng.com/?p=468#ixzz3JEk0CVqJ)
 2. [Android Handler leak 分析及解决办法](http://my.oschina.net/dragonboyorg/blog/160986)
-3. 
